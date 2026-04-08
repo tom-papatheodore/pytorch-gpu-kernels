@@ -1,6 +1,6 @@
 # PyTorch GPU Kernels
 
-This tutorial shows how to write custom CUDA kernels for use in PyTorch, how to port them to HIP for AMD GPUs using PyTorch's built-in auto-hipification, and how to maintain independent CUDA and HIP kernels in the same package. A companion slide deck is included as a PDF.
+This tutorial shows how to write custom CUDA kernels for use in PyTorch, how to port them to HIP for AMD GPUs using PyTorch's built-in auto-hipification, and how to maintain independent CUDA and HIP kernels in the same package.
 
 ## Repository Structure
 
@@ -18,21 +18,19 @@ pytorch-gpu-kernels/
 │   ├── requirements_pytorch.txt
 │   └── requirements_pytorch_rocm.txt
 │
-├── gpu-mm-optimized/        # Advanced example: independent CUDA and HIP kernels
-│   ├── src/gpu_mm/
-│   │   ├── matmul.cu        # Naive CUDA kernel (used on NVIDIA)
-│   │   ├── matmul_tiled.hip # Tiled shared-memory HIP kernel (used on AMD)
-│   │   ├── bindings.cpp
-│   │   └── __init__.py
-│   ├── tests/test_mm.py
-│   ├── setup.py
-│   ├── install.sh
-│   ├── requirements_pypi.txt
-│   ├── requirements_pytorch.txt
-│   └── requirements_pytorch_rocm.txt
-│
-├── port-custom-cuda-to-hip-pytorch.pdf   # Slide deck
-└── test_on_mi300x.sh                     # Slurm test script for MI300X
+└── gpu-mm-optimized/        # Advanced example: independent CUDA and HIP kernels
+    ├── src/gpu_mm/
+    │   ├── matmul.cu        # Naive CUDA kernel (used on NVIDIA)
+    │   ├── matmul_tiled.hip # Tiled shared-memory HIP kernel (used on AMD)
+    │   ├── bindings.cpp
+    │   └── __init__.py
+    ├── tests/test_mm.py
+    ├── setup.py
+    ├── install.sh
+    ├── requirements_pypi.txt
+    ├── requirements_pytorch.txt
+    └── requirements_pytorch_rocm.txt
+ 
 ```
 
 ### gpu-mm

@@ -12,7 +12,7 @@ M, K, N = 8192, 16384, 4096
 # Benchmark parameters
 # ---------------------------------------------------------------------
 n_iters = 50          # Number of timed repetitions
-device  = "cuda"      # Change to "hip" if needed for ROCm
+device  = "cuda"      # Works for both CUDA and ROCm-enabled PyTorch
 
 # ---------------------------------------------------------------------
 # Data setup
