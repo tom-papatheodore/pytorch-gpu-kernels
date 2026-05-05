@@ -6,4 +6,5 @@ __pycache__/
 build/
 dist/
 *.egg
-matmul.hip
+venv/
+gpu-mm/src/gpu_mm/matmul.hip
